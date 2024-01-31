@@ -3,6 +3,7 @@ import Field from "./components/Field"
 import { createContext, useState } from "react";
 import { Slide, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Header from "./components/Header";
 const TodoContext = createContext()
 const App = () => {
   const [TodosList,setTodosList] = useState([]);
@@ -11,7 +12,8 @@ const App = () => {
     <>
     <ToastContainer autoClose={1000} hideProgressBar={true} newestOnTop={true} transition={Slide} closeOnClick
 />
-    <TodoContext.Provider value={value}>          
+    <TodoContext.Provider value={value}>
+      <Header/>          
       <Field/>
       <TodoList/>
     </TodoContext.Provider>
