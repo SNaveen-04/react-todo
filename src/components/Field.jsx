@@ -38,7 +38,7 @@ const Field = () => {
   return (
     <div className="p-2 md:px-4 m-2 bg-zinc-50 shadow md:m-4 flex items-center justify-between border border-solid rounded text-slate-800 font-sans">
       <input type="text" onChange={handleChange} value={Todo.name} className="outline-none bg-transparent md:text-xl w-full placeholder:text-black" placeholder="Enter the Task"/>
-      <button onClick={submit} className=" border border-solid border-white px-2 py-1 rounded bg-blue-700 text-white ">Add</button>
+      <button onClick={submit} className=" border border-solid border-white px-2 py-1 rounded bg-blue-600 text-white ">Add</button>
     </div>
   )
 }
