@@ -13,6 +13,10 @@ const Field = () => {
     setTodo(prev => ({...prev,name:e.target.value}))
   }
   const submit = () =>{
+    if(Todo.name===''){
+      toast.error('Task should not be empty');
+      return;
+    }
     let length = TodosList.length;
     let id = length === 0 ? 1 : TodosList[length-1].id+1
     let item = TodosList.filter((todo)=>todo.name===Todo.name)

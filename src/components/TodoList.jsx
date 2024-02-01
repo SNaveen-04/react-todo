@@ -5,14 +5,14 @@ import { toast } from "react-toastify"
 
 const NoResult = () =>{
   return(
-    <div className="text-center text-lg md:text-xl font-medium text-black text-opacity-70 mt-2 p-2 rounded-md">
+    <div className="text-center text-lg md:text-xl font-medium text-slate-800 text-opacity-70 mt-2 p-2 rounded-md">
       No Results to Display
     </div>
   )
 }
 
 const TodoList = () => {
-  const [filter,setFilter] = useState('All')
+  const [filter,setFilter] = useState('Pending')
   const {TodosList,setTodosList} = useContext(TodoContext)
   const DeleteTodo = (id) =>{
     const newTodosList = TodosList.filter(todo=>todo.id!==id);
